@@ -1,0 +1,199 @@
+.App {
+  text-align: center;
+  display: flex;
+  background-color: #121418;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vh);
+  color: white;
+  overflow: hidden;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  max-width: 90%;
+  margin: 1em;
+}
+
+.inputs {
+  display: flex;
+  border: 2px solid white;
+  border-radius: 1em;
+  align-items: center;
+  height: 1em;
+}
+
+.input {
+  border: none;
+  appearance: none;
+  background-color: transparent;
+  color: white;
+  min-width: 0;
+  text-align: center;
+  outline: 0;
+  font-weight: 600;
+  padding: 0 0.5em;
+  width: 3em;
+  letter-spacing: 3px;
+}
+
+.separator {
+  font-size: 0%;
+  font-weight: 600;
+}
+
+.btn {
+  border: 2px solid white;
+  border-radius: 20px;
+  background: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em;
+  outline: 0;
+  height: fit-content;
+  font-weight: 600;
+  letter-spacing: 3px;
+  padding: 1em;
+  height: 2em;
+}
+
+.btn:active {
+  box-shadow: 0 0 20px white, inset 0 0 10px white;
+}
+
+.full-watch {
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
+
+.spiners-relative {
+  width: 30vh;
+  height: 30vh;
+  position: relative; 
+  top: 50%;
+  left: 50%;
+  margin-top: -20vh;
+  margin-left: -15vh;
+}
+
+.watch {
+/*   border: 1px solid #005eff; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2vh;
+  width: 4vh;
+  margin-top: -6vh;
+  margin-left: -2vh;
+}
+
+.spiner-1, .spiner-2, .spiners-absolute {
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -13rem;
+  margin-left: -13rem;
+  height: 26rem;
+  width: 26rem;
+}
+
+.spiner-1, 
+.spiner-2::selection{
+  background: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spin-1 {
+    animation: spiner-1-spin infinite 10s linear;
+  }
+  .spin-2 {
+    animation: spiner-2-spin infinite 10s linear;
+  }
+  .counting {
+    animation: fade infinite 1s linear;
+  }
+  .quote {
+    animation: fade infinite 6s linear;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+}
+
+@keyframes spiner-1-spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 50%;
+  }
+  25% {
+    opacity: 95%;
+  }
+  50% {
+    opacity: 80%;
+  }
+  70% {
+    opacity: 95%;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 50%;
+  }
+}
+
+@keyframes spiner-2-spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 50%;
+  }  
+  25% {
+    opacity: 95%;
+  }
+  50% {
+    opacity: 80%;
+  }
+  70% {
+    opacity: 95%;
+  }
+  100% {
+    transform: rotate(-360deg);
+    opacity: 50%;
+  }
+}
+
+@keyframes fade {
+  from {
+    color: white;
+  }
+  to {
+    color: rgba(255, 255, 255, 0.07);
+  }
+}
+
+.quote {
+  font-size: 0.9em;
+  transition: 0.5s;
+  position: absolute;
+  bottom: 0;
+  padding: 0 2em;
+}
+
