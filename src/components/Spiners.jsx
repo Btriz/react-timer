@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import typo from './typo.png'
 
 class Spiners extends Component {
   render() {
@@ -8,11 +9,11 @@ class Spiners extends Component {
       <div className="spiners-absolute">
         <div className="spiners-relative">
           <img
-            src="typo1.png"
+            src={ typo }
             className={ started ? "spiner-1 spin-1" : "spiner-1"}
             alt="decorative" />
           <img
-            src="typo1.png"
+            src={ typo }
             className={ started ? "spiner-2 spin-2" : "spiner-2"}
             alt="decorative"
           />

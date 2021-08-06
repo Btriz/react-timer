@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import FinishedSpiners from './FInishedSpiners';
+import FinishedSpiners from './FinishedSpiners';
 import Spiners from './Spiners';
 import Watch from './Watch';
 
