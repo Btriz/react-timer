@@ -74,13 +74,18 @@ class Watch extends Component {
     return (
       <div className="watch counting">
         <span id="minutes">
-          { currentMinutes }
+          { (currentMinutes)
+            .toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) }
         </span>
 
-        { currentMinutes !== '' && currentSeconds !== '' ? (<span className=""> : </span>) : undefined }
+        { currentMinutes !== '' && currentSeconds !== '' ? (
+          <span className=""> : </span>
+          ) : undefined 
+        }
 
         <span id="seconds">
-            { currentSeconds }
+            { (currentSeconds)
+              .toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})}
         </span>
 
       </div>

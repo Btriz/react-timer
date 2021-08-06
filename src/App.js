@@ -12,7 +12,6 @@ class App extends Component {
       inputedSeconds: 0,
       started: false,
       stoped: true,
-      paused: false,
     }
 
     this.playPause = this.playPause.bind(this);
@@ -36,6 +35,8 @@ class App extends Component {
       <main className="App">
         <div className="buttons">
 
+          <Input onChange={ this.handleChange } />
+
           {/*⏯️ BOTÃO ALTERA O TEXTO               */}
 
           <button
@@ -44,20 +45,7 @@ class App extends Component {
             type="button"
             onClick={this.playPause}
           >
-              {started === false ? 'START' : 'PAUSE'}
-          </button>
-
-          <Input onChange={ this.handleChange } />
-
-          {/*⏹️ DESMONTA O RELÓGIO                */}
-
-          <button 
-            className="btn"
-            id="start-pause"
-            type="button"
-            onClick={ started ? this.playPause : undefined }
-          >
-            STOP
+              {started === false ? 'START' : 'STOP'}
           </button>
         </div>
   

@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: flex;
-  background-color: #121418;
+  background-color: #191c22;
   min-height: 100vh;
   flex-direction: column;
   align-items: center;
@@ -12,11 +12,11 @@
 }
 
 .buttons {
+  align-items: center;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
   justify-content: space-between;
-  height: 10vh;
+  height: 5vh;
   max-width: 90%;
   margin: 1em;
 }
@@ -26,7 +26,8 @@
   border: 2px solid white;
   border-radius: 1em;
   align-items: center;
-  height: 1em;
+  height: 100%;
+  margin: 0.3em;
 }
 
 .input {
@@ -37,10 +38,12 @@
   min-width: 0;
   text-align: center;
   outline: 0;
-  font-weight: 600;
-  padding: 0 0.5em;
+  padding: 0;
   width: 3em;
   letter-spacing: 3px;
+  font-family: Dosis, monospace;
+  font-size: 0.8em;
+  font-weight: 600;
 }
 
 .separator {
@@ -50,19 +53,21 @@
 
 .btn {
   border: 2px solid white;
-  border-radius: 20px;
+  border-radius: 20em;
   background: none;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0.5em;
+  margin: 0.3em;
   outline: 0;
-  height: fit-content;
+  font-family: Inconsolata, monospace;
   font-weight: 600;
-  letter-spacing: 3px;
+  font-size: 0.7em;
+  letter-spacing: 0.2em;
   padding: 1em;
-  height: 2em;
+  height: 100%;
+  
 }
 
 .btn:active {
@@ -86,9 +91,13 @@
 }
 
 .watch {
-/*   border: 1px solid #005eff; */
+  /* color: #e8c22d; */
+  /* text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.453); */
+  font-family: Dosis, monospace;
+  font-weight: 400;
   align-items: center;
   display: flex;
+  font-size: 1.3em;
   justify-content: center;
   position: absolute;
   top: 50%;
@@ -97,6 +106,7 @@
   width: 4vh;
   margin-top: -6vh;
   margin-left: -2vh;
+  letter-spacing: 0.1em;
 }
 
 .spiner-1, .spiner-2, .spiners-absolute {
@@ -108,12 +118,35 @@
   margin-left: -13rem;
   height: 26rem;
   width: 26rem;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
-.spiner-1, 
-.spiner-2::selection{
-  background: none;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
+input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+}
+
+.quote {
+  /* color: #e8c22d; */
+  font-family: Inconsolata, monospace;
+  font-size: 0.9em;
+  /* font-style: italic; */
+  transition: 0.5s;
+  position: absolute;
+  bottom: 0;
+  padding: 0 2em;
+}
+
+/* 🎬 ANIMAÇÕES */
 
 @media (prefers-reduced-motion: no-preference) {
   .spin-1 {
@@ -128,16 +161,6 @@
   .quote {
     animation: fade infinite 6s linear;
   }
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance:textfield; /* Firefox */
 }
 
 @keyframes spiner-1-spin {
@@ -182,18 +205,9 @@ input[type=number] {
 
 @keyframes fade {
   from {
-    color: white;
+    opacity: 100%;
   }
   to {
-    color: rgba(255, 255, 255, 0.07);
+    opacity: 30%
   }
 }
-
-.quote {
-  font-size: 0.9em;
-  transition: 0.5s;
-  position: absolute;
-  bottom: 0;
-  padding: 0 2em;
-}
-

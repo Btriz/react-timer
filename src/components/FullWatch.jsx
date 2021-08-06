@@ -26,12 +26,12 @@ class FullWatch extends Component {
 
         { finished ? <FinishedSpiners /> : <Spiners started={ started } /> }
 
-        { started && <Watch
+        { started ? <Watch
           minutes={ minutes }
           seconds={ seconds }
           started={ started }
           finish={ this.finish }
-        /> }
+        /> : <span className="watch">00:00</span> }
 
       </div>
     );
