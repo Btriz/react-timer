@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-timer/static/css/main.5fe3f02d.chunk.css",
+    "main.css": "/react-timer/static/css/main.1fb036a3.chunk.css",
     "main.js": "/react-timer/static/js/main.83854cc3.chunk.js",
     "main.js.map": "/react-timer/static/js/main.83854cc3.chunk.js.map",
     "runtime-main.js": "/react-timer/static/js/runtime-main.fc42bcf0.js",
@@ -10,7 +10,7 @@
     "static/js/3.1e43c064.chunk.js": "/react-timer/static/js/3.1e43c064.chunk.js",
     "static/js/3.1e43c064.chunk.js.map": "/react-timer/static/js/3.1e43c064.chunk.js.map",
     "index.html": "/react-timer/index.html",
-    "static/css/main.5fe3f02d.chunk.css.map": "/react-timer/static/css/main.5fe3f02d.chunk.css.map",
+    "static/css/main.1fb036a3.chunk.css.map": "/react-timer/static/css/main.1fb036a3.chunk.css.map",
     "static/js/2.2fccd60a.chunk.js.LICENSE.txt": "/react-timer/static/js/2.2fccd60a.chunk.js.LICENSE.txt",
     "static/media/burst.08a7c8ff.png": "/react-timer/static/media/burst.08a7c8ff.png",
     "static/media/typo.3887ab42.png": "/react-timer/static/media/typo.3887ab42.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.fc42bcf0.js",
     "static/js/2.2fccd60a.chunk.js",
-    "static/css/main.5fe3f02d.chunk.css",
+    "static/css/main.1fb036a3.chunk.css",
     "static/js/main.83854cc3.chunk.js"
   ]
 }
